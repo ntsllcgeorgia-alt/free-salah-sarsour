@@ -58,12 +58,12 @@
         .ticker-label{font-family:Oswald,sans-serif;font-size:9px;letter-spacing:2px;color:#999;text-transform:uppercase;margin-top:3px;display:block;font-weight:500}
         .ticker-pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ce1126;margin-right:10px;animation:tickPulse 1s ease-in-out infinite;flex-shrink:0;box-shadow:0 0 8px rgba(206,17,38,0.5)}
         @keyframes tickPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.7)}}
-        .ticker-text{display:none}
+        .ticker-text{font-family:Oswald,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#ce1126;text-transform:uppercase;margin-right:12px;text-shadow:0 0 10px rgba(206,17,38,0.3)}
 
         /* === MOBILE TICKER BAR (hidden on desktop) === */
         .mobile-ticker{display:none;position:fixed;top:48px;left:0;width:100%;z-index:98;background:#0d0d0d;border-bottom:2px solid rgba(206,17,38,0.25);padding:8px 0;justify-content:center;align-items:center;gap:0;height:40px}
         .mobile-ticker .mt-pulse{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ce1126;margin-right:8px;animation:tickPulse 1s ease-in-out infinite;box-shadow:0 0 6px rgba(206,17,38,0.5)}
-        .mobile-ticker .mt-label{font-family:Oswald,sans-serif;font-size:8px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-right:8px}
+        .mobile-ticker .mt-label{font-family:Oswald,sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;color:#ce1126;text-transform:uppercase;margin-right:10px;text-shadow:0 0 8px rgba(206,17,38,0.3)}
         .mobile-ticker .mt-unit{text-align:center;padding:0 6px;border-right:1px solid #1a1a1a}
         .mobile-ticker .mt-unit:last-child{border-right:none}
         .mobile-ticker .mt-num{font-family:Oswald,sans-serif;font-size:18px;font-weight:700;color:#ce1126;line-height:1;display:block}
@@ -248,6 +248,7 @@
     <div class="header-logo">FREE <span>SALAH</span> SARSOUR</div>
     <div class="ticker-bar" id="tickerBar">
         <span class="ticker-pulse"></span>
+        <span class="ticker-text">DETAINED</span>
         <div class="ticker-unit"><span class="ticker-num" id="tMonths">0</span><span class="ticker-label">MO</span></div>
         <div class="ticker-unit"><span class="ticker-num" id="tWeeks">0</span><span class="ticker-label">WK</span></div>
         <div class="ticker-unit"><span class="ticker-num" id="tDays">0</span><span class="ticker-label">DAYS</span></div>
