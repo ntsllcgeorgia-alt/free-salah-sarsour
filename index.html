@@ -212,6 +212,20 @@
         .footer-links a{font-size:11px;color:#555;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s}
         .footer-links a:hover{color:#00a651}
 
+        /* === RALLY SLIDE === */
+        .rally-content{max-width:800px}
+        .rally-badge{font-size:14px;letter-spacing:6px;padding:8px 28px}
+        .rally-title{font-size:82px;line-height:0.95;margin-bottom:15px}
+        .rally-subtitle{font-size:20px;color:#ccc;margin-bottom:25px}
+        .rally-card{background:rgba(255,255,255,0.04);border:1px solid rgba(0,166,81,0.3);border-radius:10px;padding:25px 30px;max-width:500px;margin:0 auto 25px;text-align:center}
+        .rally-date{font-family:Oswald,sans-serif;font-size:32px;font-weight:700;color:#fff;letter-spacing:2px}
+        .rally-time{font-family:Oswald,sans-serif;font-size:42px;font-weight:700;color:#00a651;letter-spacing:3px;margin:5px 0}
+        .rally-divider{width:40px;height:2px;background:#00a651;margin:12px auto}
+        .rally-location{font-family:Inter,sans-serif;font-size:15px;color:#999;line-height:1.5}
+        .rally-org{font-family:Inter,sans-serif;font-size:12px;color:#666;letter-spacing:1px;margin-bottom:20px}
+        .rally-btn{font-size:15px;padding:15px 40px;cursor:pointer}
+        .rally-hashtag{font-family:Oswald,sans-serif;font-size:20px;color:#00a651;letter-spacing:4px;margin-top:20px}
+
         /* === MOBILE === */
         @media(max-width:768px){
             .header{height:48px;padding:0 15px}
@@ -264,6 +278,19 @@
             .slide-content[style*="text-align:left"]{text-align:center!important}
             .facts[style*="justify-content:flex-start"]{justify-content:center!important}
             .subtitle[style*="border-left"]{border-left:none!important;padding-left:0!important}
+            /* RALLY SLIDE MOBILE */
+            .rally-content{padding:20px 18px!important}
+            .rally-badge{font-size:11px!important;letter-spacing:4px!important;padding:5px 18px!important}
+            .rally-title{font-size:36px!important;margin-bottom:10px!important}
+            .rally-subtitle{font-size:13px!important;margin-bottom:15px!important;line-height:1.5!important;padding:0 5px}
+            .rally-card{padding:15px 18px!important;margin:0 auto 15px!important;border-radius:8px!important}
+            .rally-date{font-size:20px!important;letter-spacing:1px!important}
+            .rally-time{font-size:30px!important;letter-spacing:2px!important}
+            .rally-divider{margin:8px auto!important}
+            .rally-location{font-size:12px!important}
+            .rally-org{font-size:10px!important;margin-bottom:12px!important}
+            .rally-btn{font-size:12px!important;padding:12px 28px!important}
+            .rally-hashtag{font-size:14px!important;letter-spacing:2px!important;margin-top:12px!important}
         }
         @media(max-width:380px){
             .title{font-size:28px}
@@ -369,22 +396,22 @@
 
     <!-- SLIDE 0: RALLY — THIS SUNDAY -->
     <div class="slide slide-active" style="background:radial-gradient(ellipse at 30% 40%,rgba(0,166,81,0.25) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(206,17,38,0.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0.95) 0%,#0a0a0a 100%)">
-        <div class="slide-content" style="max-width:800px">
-            <div class="badge badge-pulse" style="font-size:14px;letter-spacing:6px;padding:8px 28px">THIS SUNDAY</div>
-            <h1 class="title" style="font-size:82px;line-height:0.95;margin-bottom:15px">RALLY FOR<br><span class="title-green">JUSTICE</span></h1>
-            <p class="subtitle" style="font-size:20px;color:#ccc;margin-bottom:25px">Stand together and demand Salah's release.<br><strong style="color:#fff">Protect First Amendment Rights.</strong></p>
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(0,166,81,0.3);border-radius:10px;padding:25px 30px;max-width:500px;margin:0 auto 25px;text-align:center">
-                <div style="font-family:Oswald,sans-serif;font-size:32px;font-weight:700;color:#fff;letter-spacing:2px">SUNDAY, APRIL 12</div>
-                <div style="font-family:Oswald,sans-serif;font-size:42px;font-weight:700;color:#00a651;letter-spacing:3px;margin:5px 0">2:00 PM</div>
-                <div style="width:40px;height:2px;background:#00a651;margin:12px auto"></div>
-                <div style="font-family:Inter,sans-serif;font-size:15px;color:#999;line-height:1.5">1700 N Lincoln Memorial Dr<br>Milwaukee, WI 53202</div>
+        <div class="slide-content rally-content">
+            <div class="badge badge-pulse rally-badge">THIS SUNDAY</div>
+            <h1 class="title rally-title">RALLY FOR<br><span class="title-green">JUSTICE</span></h1>
+            <p class="subtitle rally-subtitle">Stand together and demand Salah's release.<br><strong style="color:#fff">Protect First Amendment Rights.</strong></p>
+            <div class="rally-card">
+                <div class="rally-date">SUNDAY, APRIL 12</div>
+                <div class="rally-time">2:00 PM</div>
+                <div class="rally-divider"></div>
+                <div class="rally-location">1700 N Lincoln Memorial Dr<br>Milwaukee, WI 53202</div>
             </div>
-            <p style="font-family:Inter,sans-serif;font-size:12px;color:#666;letter-spacing:1px;margin-bottom:20px">Organized by Wisconsin Coalition for Justice in Palestine</p>
+            <p class="rally-org">Organized by Wisconsin Coalition for Justice in Palestine</p>
             <div class="buttons">
-                <button onclick="document.getElementById('flyerModal').style.display='flex'" class="btn btn-primary" style="font-size:15px;padding:15px 40px;cursor:pointer">MORE INFO</button>
+                <button onclick="document.getElementById('flyerModal').style.display='flex'" class="btn btn-primary rally-btn">MORE INFO</button>
                 <a href="https://ism.launchgood.com/v4/fundraiser/ssj" target="_blank" class="btn btn-outline">DONATE</a>
             </div>
-            <div style="font-family:Oswald,sans-serif;font-size:20px;color:#00a651;letter-spacing:4px;margin-top:20px">#FreeSalahSarsour</div>
+            <div class="rally-hashtag">#FreeSalahSarsour</div>
         </div>
     </div>
 
