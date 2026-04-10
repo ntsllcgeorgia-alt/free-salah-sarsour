@@ -166,41 +166,67 @@
 
         /* === MOBILE === */
         @media(max-width:768px){
-            .header{padding:12px 20px;top:4px}
+            .header{height:50px;padding:0 12px}
+            .header-logo{font-size:11px;letter-spacing:2px}
             .header-nav a:not(.header-donate){display:none}
-            .title{font-size:42px;letter-spacing:1px}
-            .subtitle{font-size:15px;padding:0 10px}
-            .facts{gap:25px}
-            .fact-num{font-size:40px}
-            .fact-label{font-size:9px;letter-spacing:2px}
-            .slide-content{padding:20px 15px}
-            .btn{padding:12px 25px;font-size:12px;letter-spacing:2px}
-            .arrow{padding:12px 15px;font-size:16px}
-            .arrow-left{left:10px}
-            .arrow-right{right:10px}
-            .quote{font-size:17px;padding:20px}
-            .donate-amount{font-size:40px}
-            .slider{min-height:550px}
-            .section{padding:50px 20px}
-            .section-title{font-size:30px}
-            .case-point{font-size:14px}
-            .cta .title{font-size:36px}
-            .header-logo{font-size:14px;letter-spacing:3px}
-            .ticker-bar{display:none}
-            .ticker-num{font-size:18px}
-            .ticker-label{font-size:6px;letter-spacing:2px}
-            .ticker-unit{padding:0 8px}
-            .ticker-text{font-size:8px;letter-spacing:2px;margin-right:8px}
-            .ticker-pulse{margin-right:6px}
-            .slider{height:calc(100vh - 50px);margin-top:50px}
-            .float-donate{bottom:15px;right:15px;padding:10px 20px;font-size:12px}
-            .share-btn{padding:6px 10px;font-size:10px}
+            .header-donate{padding:5px 12px;font-size:9px;letter-spacing:1px}
+            .ticker-bar{display:inline-flex!important;gap:0;background:none;border:none;padding:0}
+            .ticker-unit{padding:0 4px}
+            .ticker-unit::after{height:14px}
+            .ticker-num{font-size:13px}
+            .ticker-label{font-size:5px;letter-spacing:1px;margin-top:1px}
+            .ticker-pulse{width:4px;height:4px;margin-right:4px}
+            .slider{height:calc(100vh - 54px);min-height:auto;margin-top:54px}
+            .slide-content{padding:25px 20px}
+            .title{font-size:34px;letter-spacing:1px;margin-bottom:10px}
+            .subtitle{font-size:13px;padding:0 5px;margin-bottom:15px;line-height:1.5}
+            .badge{font-size:9px;letter-spacing:3px;padding:4px 14px;margin-bottom:10px}
+            .buttons{gap:8px;margin-bottom:12px}
+            .btn{padding:10px 20px;font-size:11px;letter-spacing:1.5px}
+            .btn-donate-lg{padding:12px 28px;font-size:12px}
+            .fund-progress{max-width:260px}
+            .fund-text{font-size:9px}
+            .facts{gap:18px;margin:15px 0}
+            .fact-num{font-size:30px}
+            .fact-label{font-size:7px;letter-spacing:1.5px}
+            .case-points{margin:12px auto}
+            .case-point{font-size:11px;padding:7px 0;gap:8px}
+            .point-x{font-size:9px;min-width:18px}
+            .quote{font-size:14px;padding:12px 15px;margin:12px auto}
+            .quote-src{font-size:10px}
+            .donate-box{padding:18px;margin:12px auto}
+            .donate-amount{font-size:34px}
+            .donate-goal{font-size:12px}
+            .donate-supporters{font-size:10px}
+            .arrow{padding:8px 10px;font-size:14px}
+            .arrow-left{left:3px}
+            .arrow-right{right:3px}
+            .dots{bottom:10px}
+            .dot{width:7px;height:7px}
+            .section{padding:35px 18px}
+            .section-title{font-size:24px;letter-spacing:2px}
+            .section-text{font-size:13px;line-height:1.7}
+            .timeline-item{flex-direction:column;gap:3px;padding:10px 0}
+            .timeline-date{min-width:auto;font-size:12px}
+            .timeline-text{font-size:12px}
+            .cta{padding:40px 18px}
+            .cta .title{font-size:28px}
+            .cta .subtitle{font-size:12px}
+            .hashtag{font-size:14px;letter-spacing:2px}
+            .share-bar{flex-direction:column;gap:6px;align-items:center}
+            .share-btn{padding:8px 20px;font-size:10px;width:180px;text-align:center}
+            .float-donate{bottom:10px;right:10px;padding:8px 14px;font-size:10px;border-radius:25px}
+            .float-donate-heart{font-size:13px}
+            .slide-content[style*="text-align:left"]{text-align:center!important}
+            .facts[style*="justify-content:flex-start"]{justify-content:center!important}
+            .subtitle[style*="border-left"]{border-left:none!important;padding-left:0!important}
         }
-        @media(max-width:480px){
-            .title{font-size:34px}
-            .facts{flex-direction:column;gap:15px}
-            .btn-donate-lg{padding:14px 30px;font-size:14px}
-            .detained-num{font-size:48px}
+        @media(max-width:380px){
+            .title{font-size:28px}
+            .fact-num{font-size:26px}
+            .ticker-num{font-size:11px}
+            .ticker-unit{padding:0 3px}
+            .header-logo{font-size:10px;letter-spacing:1px}
         }
     </style>
 </head>
