@@ -476,11 +476,13 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
     </div>
 
     <!-- SLIDE 2: LIVE EVENT — TONIGHT -->
-    <div class="slide live-slide" id="liveSlide" style="background:radial-gradient(ellipse at 40% 30%,rgba(206,17,38,0.3) 0%,transparent 50%),radial-gradient(ellipse at 60% 70%,rgba(0,166,81,0.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0.95) 0%,#0a0a0a 100%)">
+    <div class="slide live-slide" id="liveSlide" style="background:url('live-event.jpg') center top/cover no-repeat">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.75) 40%,rgba(0,0,0,0.92) 100%)"></div>
         <div class="slide-content live-content">
-            <div class="badge badge-pulse live-badge" id="liveBadge">TONIGHT</div>
-            <h1 class="title live-title">JUSTICE FOR<br><span class="title-green">SALAH SARSOUR</span></h1>
-            <p class="subtitle live-subtitle">A Virtual Mobilization Event<br><strong style="color:#fff">Live on @AMPalestine</strong></p>
+            <div class="badge badge-pulse live-badge" id="liveBadge" style="font-size:16px;letter-spacing:8px;padding:10px 32px;box-shadow:0 0 20px rgba(206,17,38,0.4)">TONIGHT</div>
+            <h1 class="title live-title" style="font-size:80px;text-shadow:0 4px 30px rgba(0,0,0,0.8)">JUSTICE FOR<br><span class="title-green">SALAH SARSOUR</span></h1>
+            <p class="subtitle" style="font-size:22px;color:#ddd;margin-bottom:8px;font-weight:400">A Virtual Mobilization Event</p>
+            <p style="font-family:Oswald,sans-serif;font-size:16px;color:#00a651;letter-spacing:3px;margin-bottom:20px">LIVE ON @AMPALESTINE</p>
             <div class="live-countdown" id="liveCountdown">
                 <div class="live-cd-label">GOING LIVE IN</div>
                 <div class="live-cd-units" id="liveCdUnits">
@@ -492,10 +494,19 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
             <div class="live-now-banner" id="liveNowBanner" style="display:none">
                 <span class="live-dot"></span> LIVE NOW
             </div>
-            <p class="live-time">Friday, April 10 | 6:30 PM EST</p>
-            <p class="live-speakers">Nihad Awad | Dr. Osama Abu Irshaid | Dr. Omar Suleiman<br>Sh. Rami Bleibet | Dr. Ismahan Abdullahi</p>
-            <div class="buttons">
-                <button onclick="document.getElementById('platformPicker').style.display='flex'" class="btn btn-primary live-watch-btn" id="liveWatchBtn" style="cursor:pointer">WATCH LIVE</button>
+            <p class="live-time" style="font-size:18px;color:#ccc;margin-bottom:15px">Friday, April 10 | 6:30 PM EST</p>
+            <div style="max-width:600px;margin:0 auto 25px;padding:18px 25px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px">
+                <div style="font-family:Oswald,sans-serif;font-size:13px;color:#00a651;letter-spacing:3px;margin-bottom:12px">FEATURING</div>
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px">
+                    <span style="font-family:Inter,sans-serif;font-size:13px;color:#ddd;background:rgba(255,255,255,0.06);padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">Nihad Awad</span>
+                    <span style="font-family:Inter,sans-serif;font-size:13px;color:#ddd;background:rgba(255,255,255,0.06);padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">Dr. Osama Abu Irshaid</span>
+                    <span style="font-family:Inter,sans-serif;font-size:13px;color:#ddd;background:rgba(255,255,255,0.06);padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">Dr. Omar Suleiman</span>
+                    <span style="font-family:Inter,sans-serif;font-size:13px;color:#ddd;background:rgba(255,255,255,0.06);padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">Sh. Rami Bleibet</span>
+                    <span style="font-family:Inter,sans-serif;font-size:13px;color:#ddd;background:rgba(255,255,255,0.06);padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">Dr. Ismahan Abdullahi</span>
+                </div>
+            </div>
+            <div class="buttons" style="gap:15px">
+                <button onclick="document.getElementById('platformPicker').style.display='flex'" class="btn live-watch-btn" id="liveWatchBtn" style="cursor:pointer;font-size:16px;padding:16px 50px;background:#ce1126;border:2px solid #ce1126;color:#fff;box-shadow:0 4px 20px rgba(206,17,38,0.4)">WATCH LIVE</button>
                 <button onclick="document.getElementById('liveModal').style.display='flex'" class="btn btn-outline" style="cursor:pointer">EVENT DETAILS</button>
             </div>
         </div>
