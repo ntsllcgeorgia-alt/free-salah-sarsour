@@ -495,13 +495,8 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
             <p class="live-time">Friday, April 10 | 6:30 PM EST</p>
             <p class="live-speakers">Nihad Awad | Dr. Osama Abu Irshaid | Dr. Omar Suleiman<br>Sh. Rami Bleibet | Dr. Ismahan Abdullahi</p>
             <div class="buttons">
-                <a href="https://www.youtube.com/@AMPalestine/live" target="_blank" class="btn btn-primary live-watch-btn" id="liveWatchBtn">WATCH LIVE</a>
-                <button onclick="document.getElementById('liveModal').style.display='flex'" class="btn btn-outline">EVENT DETAILS</button>
-            </div>
-            <div class="live-platforms">
-                <a href="https://www.youtube.com/@AMPalestine/live" target="_blank" class="live-platform">YouTube</a>
-                <a href="https://www.facebook.com/AMPalestine" target="_blank" class="live-platform">Facebook</a>
-                <a href="https://www.instagram.com/ampalestine" target="_blank" class="live-platform">Instagram</a>
+                <button onclick="document.getElementById('platformPicker').style.display='flex'" class="btn btn-primary live-watch-btn" id="liveWatchBtn" style="cursor:pointer">WATCH LIVE</button>
+                <button onclick="document.getElementById('liveModal').style.display='flex'" class="btn btn-outline" style="cursor:pointer">EVENT DETAILS</button>
             </div>
         </div>
     </div>
@@ -747,6 +742,20 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
         <a href="https://www.cair.com" target="_blank">CAIR</a>
     </div>
 </footer>
+
+<!-- PLATFORM PICKER -->
+<div id="platformPicker" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#111;border:1px solid #222;border-radius:12px;padding:35px;max-width:360px;width:90%;text-align:center;position:relative">
+        <button onclick="document.getElementById('platformPicker').style.display='none'" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#666;font-size:22px;cursor:pointer;font-family:Oswald,sans-serif">&times;</button>
+        <div style="font-family:Oswald,sans-serif;font-size:20px;color:#fff;letter-spacing:3px;margin-bottom:8px">CHOOSE YOUR PLATFORM</div>
+        <div style="font-family:Inter,sans-serif;font-size:12px;color:#666;margin-bottom:25px">Watch live on @AMPalestine</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+            <a href="https://www.youtube.com/@AMPalestine/live" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);border-radius:8px;color:#fff;font-family:Oswald,sans-serif;font-size:15px;letter-spacing:2px;text-decoration:none;transition:all 0.3s" onmouseover="this.style.background='rgba(255,0,0,0.2)'" onmouseout="this.style.background='rgba(255,0,0,0.1)'">YOUTUBE</a>
+            <a href="https://www.facebook.com/AMPalestine/live" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:rgba(24,119,242,0.1);border:1px solid rgba(24,119,242,0.3);border-radius:8px;color:#fff;font-family:Oswald,sans-serif;font-size:15px;letter-spacing:2px;text-decoration:none;transition:all 0.3s" onmouseover="this.style.background='rgba(24,119,242,0.2)'" onmouseout="this.style.background='rgba(24,119,242,0.1)'">FACEBOOK</a>
+            <a href="https://www.instagram.com/ampalestine/live" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.3);border-radius:8px;color:#fff;font-family:Oswald,sans-serif;font-size:15px;letter-spacing:2px;text-decoration:none;transition:all 0.3s" onmouseover="this.style.background='rgba(225,48,108,0.2)'" onmouseout="this.style.background='rgba(225,48,108,0.1)'">INSTAGRAM</a>
+        </div>
+    </div>
+</div>
 
 <!-- LIVE EVENT MODAL -->
 <div id="liveModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:pointer" onclick="this.style.display='none'">
