@@ -1,0 +1,33 @@
+name: Update News
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run news updater
+        run: python scripts/update_news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "News Bot"
+          git config user.email "bot@freesalahsarsour.com"
+          git diff --quiet index.html && echo "No changes" && exit 0
+          git add index.html
+          git commit -m "Auto-update news articles"
+          git push
