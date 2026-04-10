@@ -238,7 +238,7 @@
         .live-watch-btn{background:#ce1126;border:2px solid #ce1126;color:#fff;font-size:16px;padding:16px 50px;cursor:pointer;box-shadow:0 4px 20px rgba(206,17,38,0.4)}
         .live-watch-btn:hover{background:#a00e1f;border-color:#a00e1f}
         .live-details-btn{cursor:pointer}
-        .live-buttons{gap:15px}
+        .live-buttons{gap:15px;justify-content:center;display:flex;flex-wrap:wrap}
 
         /* === RALLY SLIDE === */
         .rally-content{max-width:800px}
@@ -441,8 +441,8 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
     </div>
 
     <!-- SLIDE 2: LIVE EVENT — TONIGHT -->
-    <div class="slide live-slide" id="liveSlide" style="background:url('salah-podium-clean.jpg') center/cover no-repeat">
-        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0.95) 100%)"></div>
+    <div class="slide live-slide" id="liveSlide" style="background:url('salah-podium-clean.jpg') 70% center/cover no-repeat">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.85) 60%,rgba(0,0,0,0.95) 100%)"></div>
         <div class="slide-content live-content">
             <div class="badge badge-pulse live-badge" id="liveBadge">TONIGHT</div>
             <h1 class="title live-title">JUSTICE FOR<br><span class="title-green">SALAH SARSOUR</span></h1>
