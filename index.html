@@ -318,13 +318,15 @@
 function checkPass(){
     if(document.getElementById('passInput').value==='1948'){
         document.getElementById('passGate').style.display='none';
+        document.querySelector('.flag-stripe').style.display='';
+        document.querySelector('.float-donate').style.display='';
         sessionStorage.setItem('fss_access','1');
     } else {
         document.getElementById('passError').style.display='block';
         document.getElementById('passInput').value='';
     }
 }
-if(sessionStorage.getItem('fss_access')==='1') document.getElementById('passGate').style.display='none';
+if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate').style.display='none'}else{document.querySelector('.flag-stripe').style.display='none';document.querySelector('.float-donate').style.display='none'}
 </script>
 
 <!-- PALESTINIAN FLAG STRIPE -->
