@@ -60,6 +60,15 @@
         @keyframes tickPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.7)}}
         .ticker-text{display:none}
 
+        /* === MOBILE TICKER BAR (hidden on desktop) === */
+        .mobile-ticker{display:none;position:fixed;top:48px;left:0;width:100%;z-index:98;background:#0d0d0d;border-bottom:2px solid rgba(206,17,38,0.25);padding:8px 0;justify-content:center;align-items:center;gap:0;height:40px}
+        .mobile-ticker .mt-pulse{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ce1126;margin-right:8px;animation:tickPulse 1s ease-in-out infinite;box-shadow:0 0 6px rgba(206,17,38,0.5)}
+        .mobile-ticker .mt-label{font-family:Oswald,sans-serif;font-size:8px;letter-spacing:2px;color:#666;text-transform:uppercase;margin-right:8px}
+        .mobile-ticker .mt-unit{text-align:center;padding:0 6px;border-right:1px solid #1a1a1a}
+        .mobile-ticker .mt-unit:last-child{border-right:none}
+        .mobile-ticker .mt-num{font-family:Oswald,sans-serif;font-size:18px;font-weight:700;color:#ce1126;line-height:1;display:block}
+        .mobile-ticker .mt-sub{font-family:Oswald,sans-serif;font-size:7px;letter-spacing:1.5px;color:#888;text-transform:uppercase;margin-top:1px;display:block}
+
         /* === DETAINED COUNTER (slide) === */
         .detained-counter{margin:10px 0 20px;display:flex;flex-direction:column;align-items:center;display:none}
 
@@ -166,17 +175,13 @@
 
         /* === MOBILE === */
         @media(max-width:768px){
-            .header{height:50px;padding:0 12px}
-            .header-logo{font-size:11px;letter-spacing:2px}
+            .header{height:44px;padding:0 15px}
+            .header-logo{font-size:13px;letter-spacing:3px}
             .header-nav a:not(.header-donate){display:none}
-            .header-donate{padding:5px 12px;font-size:9px;letter-spacing:1px}
-            .ticker-bar{display:inline-flex!important;gap:0;background:none;border:none;padding:0}
-            .ticker-unit{padding:0 4px}
-            .ticker-unit::after{height:14px}
-            .ticker-num{font-size:13px}
-            .ticker-label{font-size:5px;letter-spacing:1px;margin-top:1px}
-            .ticker-pulse{width:4px;height:4px;margin-right:4px}
-            .slider{height:calc(100vh - 54px);min-height:auto;margin-top:54px}
+            .header-donate{padding:6px 14px;font-size:10px;letter-spacing:1px}
+            .ticker-bar{display:none}
+            .mobile-ticker{display:flex!important}
+            .slider{height:calc(100vh - 84px);min-height:auto;margin-top:84px}
             .slide-content{padding:25px 20px}
             .title{font-size:34px;letter-spacing:1px;margin-bottom:10px}
             .subtitle{font-size:13px;padding:0 5px;margin-bottom:15px;line-height:1.5}
@@ -224,9 +229,9 @@
         @media(max-width:380px){
             .title{font-size:28px}
             .fact-num{font-size:26px}
-            .ticker-num{font-size:11px}
-            .ticker-unit{padding:0 3px}
-            .header-logo{font-size:10px;letter-spacing:1px}
+            .header-logo{font-size:11px;letter-spacing:2px}
+            .mobile-ticker .mt-num{font-size:15px}
+            .mobile-ticker .mt-unit{padding:0 5px}
         }
     </style>
 </head>
@@ -257,6 +262,18 @@
         <a href="https://www.launchgood.com/v4/campaign/salah_sarsour_justice_fund" target="_blank" class="header-donate">DONATE</a>
     </nav>
 </header>
+
+<!-- MOBILE TICKER (hidden on desktop, shown on mobile below header) -->
+<div class="mobile-ticker" id="mobileTicker">
+    <span class="mt-pulse"></span>
+    <span class="mt-label">DETAINED</span>
+    <div class="mt-unit"><span class="mt-num" id="mMonths">0</span><span class="mt-sub">MO</span></div>
+    <div class="mt-unit"><span class="mt-num" id="mWeeks">0</span><span class="mt-sub">WK</span></div>
+    <div class="mt-unit"><span class="mt-num" id="mDays">0</span><span class="mt-sub">DAYS</span></div>
+    <div class="mt-unit"><span class="mt-num" id="mHours">0</span><span class="mt-sub">HRS</span></div>
+    <div class="mt-unit"><span class="mt-num" id="mMins">0</span><span class="mt-sub">MIN</span></div>
+    <div class="mt-unit"><span class="mt-num" id="mSecs">0</span><span class="mt-sub">SEC</span></div>
+</div>
 
 <!-- HERO SLIDER -->
 <div class="slider" id="slider">
@@ -454,6 +471,17 @@
         document.getElementById('tHours').textContent = hours;
         document.getElementById('tMins').textContent = mins < 10 ? '0'+mins : mins;
         document.getElementById('tSecs').textContent = secs < 10 ? '0'+secs : secs;
+
+        // Mobile ticker
+        var mm = document.getElementById('mMonths');
+        if(mm){
+            mm.textContent = months;
+            document.getElementById('mWeeks').textContent = weeks;
+            document.getElementById('mDays').textContent = days;
+            document.getElementById('mHours').textContent = hours;
+            document.getElementById('mMins').textContent = mins < 10 ? '0'+mins : mins;
+            document.getElementById('mSecs').textContent = secs < 10 ? '0'+secs : secs;
+        }
 
         var el = document.getElementById('daysDetained');
         if(el) el.textContent = Math.floor((now - detained) / 86400000);
