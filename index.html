@@ -365,8 +365,29 @@
 <!-- HERO SLIDER -->
 <div class="slider" id="slider">
 
+    <!-- SLIDE 0: RALLY — THIS SUNDAY -->
+    <div class="slide slide-active" style="background:radial-gradient(ellipse at 30% 40%,rgba(0,166,81,0.25) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(206,17,38,0.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0.95) 0%,#0a0a0a 100%)">
+        <div class="slide-content" style="max-width:800px">
+            <div class="badge badge-pulse" style="font-size:14px;letter-spacing:6px;padding:8px 28px">THIS SUNDAY</div>
+            <h1 class="title" style="font-size:82px;line-height:0.95;margin-bottom:15px">RALLY FOR<br><span class="title-green">JUSTICE</span></h1>
+            <p class="subtitle" style="font-size:20px;color:#ccc;margin-bottom:25px">Stand together and demand Salah's release.<br><strong style="color:#fff">Protect First Amendment Rights.</strong></p>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(0,166,81,0.3);border-radius:10px;padding:25px 30px;max-width:500px;margin:0 auto 25px;text-align:center">
+                <div style="font-family:Oswald,sans-serif;font-size:32px;font-weight:700;color:#fff;letter-spacing:2px">SUNDAY, APRIL 12</div>
+                <div style="font-family:Oswald,sans-serif;font-size:42px;font-weight:700;color:#00a651;letter-spacing:3px;margin:5px 0">2:00 PM</div>
+                <div style="width:40px;height:2px;background:#00a651;margin:12px auto"></div>
+                <div style="font-family:Inter,sans-serif;font-size:15px;color:#999;line-height:1.5">1700 N Lincoln Memorial Dr<br>Milwaukee, WI 53202</div>
+            </div>
+            <p style="font-family:Inter,sans-serif;font-size:12px;color:#666;letter-spacing:1px;margin-bottom:20px">Organized by Wisconsin Coalition for Justice in Palestine</p>
+            <div class="buttons">
+                <button onclick="document.getElementById('flyerModal').style.display='flex'" class="btn btn-primary" style="font-size:15px;padding:15px 40px;cursor:pointer">MORE INFO</button>
+                <a href="https://ism.launchgood.com/v4/fundraiser/ssj" target="_blank" class="btn btn-outline">DONATE</a>
+            </div>
+            <div style="font-family:Oswald,sans-serif;font-size:20px;color:#00a651;letter-spacing:4px;margin-top:20px">#FreeSalahSarsour</div>
+        </div>
+    </div>
+
     <!-- SLIDE 1: IMPACT — bold, red urgency, centered power -->
-    <div class="slide slide-active" style="background:radial-gradient(ellipse at center,rgba(80,0,0,0.4) 0%,rgba(0,0,0,0.95) 70%)">
+    <div class="slide" style="background:radial-gradient(ellipse at center,rgba(80,0,0,0.4) 0%,rgba(0,0,0,0.95) 70%)">
         <div class="slide-content">
             <div class="badge badge-pulse">URGENT</div>
             <h1 class="title" style="font-size:90px;line-height:0.95">FREE SALAH<br><span class="title-green">SARSOUR</span></h1>
@@ -603,6 +624,14 @@
     </div>
 </footer>
 
+<!-- FLYER MODAL -->
+<div id="flyerModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:pointer" onclick="this.style.display='none'">
+    <div style="position:relative;max-width:600px;max-height:90vh;margin:20px">
+        <button onclick="document.getElementById('flyerModal').style.display='none'" style="position:absolute;top:-15px;right:-15px;width:36px;height:36px;border-radius:50%;background:#00a651;color:#fff;border:none;font-size:20px;cursor:pointer;font-family:Oswald,sans-serif;z-index:10000;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.5)">&times;</button>
+        <img src="rally-flyer.jpg" alt="Rally for Justice flyer — Sunday April 12 at 2pm, 1700 N Lincoln Memorial Dr, Milwaukee WI" style="width:100%;height:auto;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,0.6)">
+    </div>
+</div>
+
 <!-- SLIDER JS -->
 <script>
 (function(){
@@ -671,7 +700,7 @@
     // Count up facts when slide 2 becomes active
     var counted = false;
     function checkCountUp(){
-        if(!counted && document.querySelectorAll('.slide')[1].classList.contains('slide-active')){
+        if(!counted && document.querySelectorAll('.slide')[3].classList.contains('slide-active')){
             counted = true;
             var nums = document.querySelectorAll('.fact-num');
             if(nums[0]) animateCount(nums[0], 32, 1500);
