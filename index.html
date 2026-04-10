@@ -166,8 +166,8 @@
         .cta .title{font-size:52px;margin-bottom:15px}
         .cta .subtitle{margin-bottom:30px}
 
-        /* === NEWS TICKER (scrolling) === */
-        .news-ticker{background:#050505;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:12px 0;overflow:hidden;white-space:nowrap}
+        /* === NEWS TICKER (scrolling, below header) === */
+        .news-ticker{background:#050505;border-bottom:1px solid rgba(0,166,81,0.2);padding:8px 0;overflow:hidden;white-space:nowrap}
         .news-ticker-inner{display:inline-block;animation:newsTick 40s linear infinite}
         .news-ticker-item{display:inline;font-family:Inter,sans-serif;font-size:13px;color:#999;margin-right:60px}
         .news-ticker-item a{color:#999;text-decoration:none;transition:color 0.3s}
@@ -304,6 +304,27 @@
     <div class="mt-unit"><span class="mt-num" id="mHours">0</span><span class="mt-sub">HRS</span></div>
     <div class="mt-unit"><span class="mt-num" id="mMins">0</span><span class="mt-sub">MIN</span></div>
     <div class="mt-unit"><span class="mt-num" id="mSecs">0</span><span class="mt-sub">SEC</span></div>
+</div>
+
+<!-- SCROLLING NEWS TICKER (below headers, above slides) -->
+<div class="news-ticker" id="newsTicker">
+    <div class="news-ticker-inner">
+        <span class="news-ticker-item"><span class="news-ticker-source">CNN</span> <a href="https://www.cnn.com/2026/04/03/us/salah-sarsour-islamic-society-milwaukee-detained" target="_blank">Elected leaders and clergy seek release of Salah Sarsour, Wisconsin mosque president detained by ICE</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">PBS</span> <a href="https://www.pbs.org/newshour/politics/a-wisconsin-mosque-president-was-detained-by-ice-agents-supporters-say-he-was-targeted-for-speaking-out-against-israel" target="_blank">Wisconsin mosque president detained by ICE. Supporters say he was targeted for speaking out against Israel</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">AL JAZEERA</span> <a href="https://www.aljazeera.com/news/2026/4/2/rights-groups-milwaukee-leaders-slam-ices-arrest-of-palestinian-advocate" target="_blank">Rights groups, Milwaukee leaders slam ICE's arrest of Palestinian advocate</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">WPR</span> <a href="https://www.wpr.org/news/president-islamic-society-of-milwaukee-salah-sarsour-detained-ice" target="_blank">President of Islamic Society of Milwaukee detained by ICE</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">CNN</span> <a href="https://www.cnn.com/2026/04/03/us/salah-sarsour-islamic-society-milwaukee-detained" target="_blank">Elected leaders and clergy seek release of Salah Sarsour, Wisconsin mosque president detained by ICE</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">PBS</span> <a href="https://www.pbs.org/newshour/politics/a-wisconsin-mosque-president-was-detained-by-ice-agents-supporters-say-he-was-targeted-for-speaking-out-against-israel" target="_blank">Wisconsin mosque president detained by ICE. Supporters say he was targeted for speaking out against Israel</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">AL JAZEERA</span> <a href="https://www.aljazeera.com/news/2026/4/2/rights-groups-milwaukee-leaders-slam-ices-arrest-of-palestinian-advocate" target="_blank">Rights groups, Milwaukee leaders slam ICE's arrest of Palestinian advocate</a></span>
+        <span class="news-ticker-dot">&bull;</span>
+        <span class="news-ticker-item"><span class="news-ticker-source">WPR</span> <a href="https://www.wpr.org/news/president-islamic-society-of-milwaukee-salah-sarsour-detained-ice" target="_blank">President of Islamic Society of Milwaukee detained by ICE</a></span>
+    </div>
 </div>
 
 <!-- HERO SLIDER -->
@@ -445,9 +466,9 @@
     </div>
 </section>
 
-<!-- SCROLLING NEWS TICKER -->
-<div class="news-ticker">
-    <div class="news-ticker-inner">
+<!-- OLD TICKER HIDDEN -->
+<div style="display:none">
+    <div>
         <span class="news-ticker-item"><span class="news-ticker-source">CNN</span> <a href="https://www.cnn.com/2026/04/03/us/salah-sarsour-islamic-society-milwaukee-detained" target="_blank">Elected leaders and clergy seek release of Salah Sarsour, Wisconsin mosque president detained by ICE</a></span>
         <span class="news-ticker-dot">&bull;</span>
         <span class="news-ticker-item"><span class="news-ticker-source">PBS</span> <a href="https://www.pbs.org/newshour/politics/a-wisconsin-mosque-president-was-detained-by-ice-agents-supporters-say-he-was-targeted-for-speaking-out-against-israel" target="_blank">Wisconsin mosque president detained by ICE. Supporters say he was targeted for speaking out against Israel</a></span>
