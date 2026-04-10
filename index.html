@@ -394,8 +394,25 @@
 <!-- HERO SLIDER -->
 <div class="slider" id="slider">
 
-    <!-- SLIDE 0: RALLY — THIS SUNDAY -->
-    <div class="slide slide-active" style="background:radial-gradient(ellipse at 30% 40%,rgba(0,166,81,0.25) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(206,17,38,0.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0.95) 0%,#0a0a0a 100%)">
+    <!-- SLIDE 1: IMPACT — bold, red urgency, centered power -->
+    <div class="slide slide-active" style="background:radial-gradient(ellipse at center,rgba(80,0,0,0.4) 0%,rgba(0,0,0,0.95) 70%)">
+        <div class="slide-content">
+            <div class="badge badge-pulse">URGENT</div>
+            <h1 class="title" style="font-size:90px;line-height:0.95">FREE SALAH<br><span class="title-green">SARSOUR</span></h1>
+            <p class="subtitle" style="font-size:20px;margin-top:15px">Father. Community Leader. Wrongfully Detained.<br><strong style="color:#fff">32 Years in America. Zero Criminal Record.</strong></p>
+            <div class="buttons">
+                <a href="https://ism.launchgood.com/v4/fundraiser/ssj" target="_blank" class="btn btn-primary" style="font-size:16px;padding:16px 45px">DONATE NOW</a>
+                <a href="#story" class="btn btn-outline">READ HIS STORY</a>
+            </div>
+            <div class="fund-progress">
+                <div class="fund-bar"><div class="fund-fill"></div></div>
+                <span class="fund-text">Join thousands of supporters funding his legal defense</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: RALLY — THIS SUNDAY -->
+    <div class="slide" style="background:radial-gradient(ellipse at 30% 40%,rgba(0,166,81,0.25) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(206,17,38,0.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0.95) 0%,#0a0a0a 100%)">
         <div class="slide-content rally-content">
             <div class="badge badge-pulse rally-badge">THIS SUNDAY</div>
             <h1 class="title rally-title">RALLY FOR<br><span class="title-green">JUSTICE</span></h1>
@@ -412,23 +429,6 @@
                 <a href="https://ism.launchgood.com/v4/fundraiser/ssj" target="_blank" class="btn btn-outline">DONATE</a>
             </div>
             <div class="rally-hashtag">#FreeSalahSarsour</div>
-        </div>
-    </div>
-
-    <!-- SLIDE 1: IMPACT — bold, red urgency, centered power -->
-    <div class="slide" style="background:radial-gradient(ellipse at center,rgba(80,0,0,0.4) 0%,rgba(0,0,0,0.95) 70%)">
-        <div class="slide-content">
-            <div class="badge badge-pulse">URGENT</div>
-            <h1 class="title" style="font-size:90px;line-height:0.95">FREE SALAH<br><span class="title-green">SARSOUR</span></h1>
-            <p class="subtitle" style="font-size:20px;margin-top:15px">Father. Community Leader. Wrongfully Detained.<br><strong style="color:#fff">32 Years in America. Zero Criminal Record.</strong></p>
-            <div class="buttons">
-                <a href="https://ism.launchgood.com/v4/fundraiser/ssj" target="_blank" class="btn btn-primary" style="font-size:16px;padding:16px 45px">DONATE NOW</a>
-                <a href="#story" class="btn btn-outline">READ HIS STORY</a>
-            </div>
-            <div class="fund-progress">
-                <div class="fund-bar"><div class="fund-fill"></div></div>
-                <span class="fund-text">Join thousands of supporters funding his legal defense</span>
-            </div>
         </div>
     </div>
 
@@ -729,7 +729,7 @@
     // Count up facts when slide 2 becomes active
     var counted = false;
     function checkCountUp(){
-        if(!counted && document.querySelectorAll('.slide')[3].classList.contains('slide-active')){
+        if(!counted && document.querySelectorAll('.slide')[4].classList.contains('slide-active')){
             counted = true;
             var nums = document.querySelectorAll('.fact-num');
             if(nums[0]) animateCount(nums[0], 32, 1500);
