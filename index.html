@@ -61,7 +61,7 @@
         .ticker-text{font-family:Oswald,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#ce1126;text-transform:uppercase;margin-right:12px;text-shadow:0 0 10px rgba(206,17,38,0.3)}
 
         /* === MOBILE TICKER BAR (hidden on desktop) === */
-        .mobile-ticker{display:none;position:fixed;top:48px;left:0;width:100%;z-index:98;background:#0d0d0d;border-bottom:2px solid rgba(206,17,38,0.25);padding:8px 0;justify-content:center;align-items:center;gap:0;height:40px}
+        .mobile-ticker{display:none;position:fixed;top:52px;left:0;width:100%;z-index:98;background:#0a0a0a;border-bottom:2px solid rgba(206,17,38,0.3);padding:6px 0;justify-content:center;align-items:center;gap:0;height:38px}
         .mobile-ticker .mt-pulse{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ce1126;margin-right:8px;animation:tickPulse 1s ease-in-out infinite;box-shadow:0 0 6px rgba(206,17,38,0.5)}
         .mobile-ticker .mt-label{font-family:Oswald,sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;color:#ce1126;text-transform:uppercase;margin-right:10px;text-shadow:0 0 8px rgba(206,17,38,0.3)}
         .mobile-ticker .mt-unit{text-align:center;padding:0 6px;border-right:1px solid #1a1a1a}
@@ -194,6 +194,8 @@
             .news-card{padding:18px}
             .news-card-title{font-size:14px}
             .news-ticker-item{font-size:11px;margin-right:40px}
+            .news-ticker{display:none!important}
+            .slider{height:calc(100vh - 90px)!important}
         }
 
         /* === FOOTER === */
@@ -205,30 +207,30 @@
 
         /* === MOBILE === */
         @media(max-width:768px){
-            .header{height:44px;padding:0 15px}
-            .header-logo{font-size:13px;letter-spacing:3px}
+            .header{height:48px;padding:0 15px}
+            .header-logo{font-size:14px;letter-spacing:3px}
             .header-nav a:not(.header-donate){display:none}
-            .header-donate{padding:6px 14px;font-size:10px;letter-spacing:1px}
+            .header-donate{padding:7px 16px;font-size:11px;letter-spacing:1.5px}
             .ticker-bar{display:none}
             .mobile-ticker{display:flex!important}
-            .slider{height:calc(100vh - 130px);min-height:auto}
-            .slide-content{padding:25px 20px}
-            .title{font-size:34px;letter-spacing:1px;margin-bottom:10px}
-            .subtitle{font-size:13px;padding:0 5px;margin-bottom:15px;line-height:1.5}
-            .badge{font-size:9px;letter-spacing:3px;padding:4px 14px;margin-bottom:10px}
-            .buttons{gap:8px;margin-bottom:12px}
-            .btn{padding:10px 20px;font-size:11px;letter-spacing:1.5px}
-            .btn-donate-lg{padding:12px 28px;font-size:12px}
+            .slider{height:calc(100vh - 95px);min-height:auto}
+            .slide-content{padding:30px 25px}
+            .title{font-size:38px;letter-spacing:1px;margin-bottom:14px}
+            .subtitle{font-size:14px;padding:0 10px;margin-bottom:20px;line-height:1.6}
+            .badge{font-size:10px;letter-spacing:3px;padding:5px 16px;margin-bottom:14px}
+            .buttons{gap:10px;margin-bottom:16px}
+            .btn{padding:12px 24px;font-size:12px;letter-spacing:1.5px}
+            .btn-donate-lg{padding:14px 32px;font-size:13px}
             .fund-progress{max-width:260px}
             .fund-text{font-size:9px}
-            .facts{gap:18px;margin:15px 0}
-            .fact-num{font-size:30px}
-            .fact-label{font-size:7px;letter-spacing:1.5px}
-            .case-points{margin:12px auto}
-            .case-point{font-size:11px;padding:7px 0;gap:8px}
-            .point-x{font-size:9px;min-width:18px}
-            .quote{font-size:14px;padding:12px 15px;margin:12px auto}
-            .quote-src{font-size:10px}
+            .facts{gap:25px;margin:20px 0}
+            .fact-num{font-size:36px}
+            .fact-label{font-size:8px;letter-spacing:2px}
+            .case-points{margin:16px auto}
+            .case-point{font-size:13px;padding:9px 0;gap:10px}
+            .point-x{font-size:10px;min-width:20px}
+            .quote{font-size:16px;padding:15px 18px;margin:16px auto}
+            .quote-src{font-size:11px}
             .donate-box{padding:18px;margin:12px auto}
             .donate-amount{font-size:34px}
             .donate-goal{font-size:12px}
