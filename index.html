@@ -23,7 +23,7 @@
         a{text-decoration:none;color:inherit}
 
         /* === HEADER === */
-        .header{position:fixed;top:4px;left:0;width:100%;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);border-bottom:none;padding:12px 40px;display:flex;align-items:center;justify-content:space-between;transition:all 0.3s;height:48px}
+        .header{position:fixed;top:4px;left:0;width:100%;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #1a1a1a;padding:0 30px;display:flex;align-items:center;justify-content:space-between;transition:all 0.3s;height:52px}
         .header-logo{font-family:Oswald,sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;color:#fff;text-transform:uppercase}
         .header-logo span{color:#00a651}
         .header-nav{display:flex;gap:25px;align-items:center}
@@ -33,7 +33,7 @@
         .header-donate:hover{background:#008c44;transform:translateY(-1px)}
 
         /* === SLIDER === */
-        .slider{position:relative;width:100%;height:calc(100vh - 102px);min-height:550px;overflow:hidden;background:#0a0a0a;margin-top:102px}
+        .slider{position:relative;width:100%;height:calc(100vh - 56px);min-height:550px;overflow:hidden;background:#0a0a0a;margin-top:56px}
         .slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s ease;display:flex;align-items:center;justify-content:center;padding:0}
         .slide-active{opacity:1;z-index:2}
         .slide-content{position:relative;z-index:3;max-width:900px;padding:40px;text-align:center}
@@ -49,15 +49,15 @@
         .badge-pulse{color:#ce1126;border-color:rgba(206,17,38,0.4);background:rgba(206,17,38,0.1);animation:badgePulse 2s ease-in-out infinite}
         @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(206,17,38,0.4)}50%{box-shadow:0 0 0 12px rgba(206,17,38,0)}}
 
-        /* === LIVE TICKER BAR === */
-        .ticker-bar{position:fixed;top:52px;left:0;width:100%;z-index:99;background:#0d0d0d;border-bottom:2px solid rgba(206,17,38,0.3);padding:10px 0;display:flex;justify-content:center;align-items:center;gap:0;height:50px}
-        .ticker-unit{text-align:center;padding:0 18px;border-right:1px solid #222}
+        /* === LIVE TICKER (inside header) === */
+        .ticker-bar{display:flex;align-items:center;gap:0}
+        .ticker-unit{text-align:center;padding:0 8px;border-right:1px solid #222}
         .ticker-unit:last-child{border-right:none}
-        .ticker-num{font-family:Oswald,sans-serif;font-size:28px;font-weight:700;color:#ce1126;line-height:1;display:block}
-        .ticker-label{font-family:Inter,sans-serif;font-size:8px;letter-spacing:3px;color:#555;text-transform:uppercase;margin-top:3px;display:block}
-        .ticker-pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ce1126;margin-right:12px;animation:tickPulse 1s ease-in-out infinite}
+        .ticker-num{font-family:Oswald,sans-serif;font-size:18px;font-weight:700;color:#ce1126;line-height:1;display:block}
+        .ticker-label{font-family:Inter,sans-serif;font-size:6px;letter-spacing:2px;color:#555;text-transform:uppercase;margin-top:2px;display:block}
+        .ticker-pulse{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ce1126;margin-right:8px;animation:tickPulse 1s ease-in-out infinite}
         @keyframes tickPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.7)}}
-        .ticker-text{font-family:Oswald,sans-serif;font-size:10px;letter-spacing:3px;color:#666;text-transform:uppercase;margin-right:15px}
+        .ticker-text{display:none}
 
         /* === DETAINED COUNTER (slide) === */
         .detained-counter{margin:10px 0 20px;display:flex;flex-direction:column;align-items:center;display:none}
@@ -185,13 +185,13 @@
             .case-point{font-size:14px}
             .cta .title{font-size:36px}
             .header-logo{font-size:14px;letter-spacing:3px}
-            .ticker-bar{top:46px;padding:6px 0;height:40px}
+            .ticker-bar{display:none}
             .ticker-num{font-size:18px}
             .ticker-label{font-size:6px;letter-spacing:2px}
             .ticker-unit{padding:0 8px}
             .ticker-text{font-size:8px;letter-spacing:2px;margin-right:8px}
             .ticker-pulse{margin-right:6px}
-            .slider{height:calc(100vh - 86px);margin-top:86px}
+            .slider{height:calc(100vh - 50px);margin-top:50px}
             .float-donate{bottom:15px;right:15px;padding:10px 20px;font-size:12px}
             .share-btn{padding:6px 10px;font-size:10px}
         }
@@ -211,21 +211,18 @@
 <!-- FLOATING DONATE BUTTON -->
 <a href="https://www.launchgood.com/v4/campaign/salah_sarsour_justice_fund" target="_blank" class="float-donate"><span class="float-donate-heart">&#10084;</span> DONATE</a>
 
-<!-- LIVE DETENTION TICKER -->
-<div class="ticker-bar" id="tickerBar">
-    <span class="ticker-pulse"></span>
-    <span class="ticker-text">DETAINED FOR</span>
-    <div class="ticker-unit"><span class="ticker-num" id="tMonths">0</span><span class="ticker-label">MONTHS</span></div>
-    <div class="ticker-unit"><span class="ticker-num" id="tWeeks">0</span><span class="ticker-label">WEEKS</span></div>
-    <div class="ticker-unit"><span class="ticker-num" id="tDays">0</span><span class="ticker-label">DAYS</span></div>
-    <div class="ticker-unit"><span class="ticker-num" id="tHours">0</span><span class="ticker-label">HOURS</span></div>
-    <div class="ticker-unit"><span class="ticker-num" id="tMins">0</span><span class="ticker-label">MINUTES</span></div>
-    <div class="ticker-unit"><span class="ticker-num" id="tSecs">0</span><span class="ticker-label">SECONDS</span></div>
-</div>
-
-<!-- HEADER -->
+<!-- HEADER WITH LIVE TICKER -->
 <header class="header">
     <div class="header-logo">FREE <span>SALAH</span> SARSOUR</div>
+    <div class="ticker-bar" id="tickerBar">
+        <span class="ticker-pulse"></span>
+        <div class="ticker-unit"><span class="ticker-num" id="tMonths">0</span><span class="ticker-label">MO</span></div>
+        <div class="ticker-unit"><span class="ticker-num" id="tWeeks">0</span><span class="ticker-label">WK</span></div>
+        <div class="ticker-unit"><span class="ticker-num" id="tDays">0</span><span class="ticker-label">DAYS</span></div>
+        <div class="ticker-unit"><span class="ticker-num" id="tHours">0</span><span class="ticker-label">HRS</span></div>
+        <div class="ticker-unit"><span class="ticker-num" id="tMins">0</span><span class="ticker-label">MIN</span></div>
+        <div class="ticker-unit"><span class="ticker-num" id="tSecs">0</span><span class="ticker-label">SEC</span></div>
+    </div>
     <nav class="header-nav">
         <a href="#story">His Story</a>
         <a href="#case">The Case</a>
