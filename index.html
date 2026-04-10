@@ -460,6 +460,10 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
                 <span class="live-dot"></span> LIVE NOW
             </div>
             <p class="live-time">Friday, April 10 | 6:30 PM EST</p>
+            <div class="buttons live-buttons">
+                <button onclick="document.getElementById('platformPicker').style.display='flex'" class="btn live-watch-btn" id="liveWatchBtn">WATCH LIVE</button>
+                <button onclick="document.getElementById('liveModal').style.display='flex'" class="btn btn-outline live-details-btn">EVENT DETAILS</button>
+            </div>
             <div class="live-featuring-box">
                 <div class="live-featuring-label">FEATURING</div>
                 <div class="live-featuring-names">
@@ -469,10 +473,6 @@ if(sessionStorage.getItem('fss_access')==='1'){document.getElementById('passGate
                     <span class="live-speaker-pill">Sh. Rami Bleibet</span>
                     <span class="live-speaker-pill">Dr. Ismahan Abdullahi</span>
                 </div>
-            </div>
-            <div class="buttons live-buttons">
-                <button onclick="document.getElementById('platformPicker').style.display='flex'" class="btn live-watch-btn" id="liveWatchBtn">WATCH LIVE</button>
-                <button onclick="document.getElementById('liveModal').style.display='flex'" class="btn btn-outline live-details-btn">EVENT DETAILS</button>
             </div>
         </div>
     </div>
