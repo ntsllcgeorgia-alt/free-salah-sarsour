@@ -33,7 +33,7 @@
         .header-donate:hover{background:#008c44;transform:translateY(-1px)}
 
         /* === SLIDER === */
-        .slider{position:relative;width:100%;height:calc(100vh - 74px);min-height:550px;overflow:hidden;background:#0a0a0a;margin-top:74px}
+        .slider{position:relative;width:100%;height:calc(100vh - 110px);min-height:500px;overflow:hidden;background:#0a0a0a}
         .slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s ease;display:flex;align-items:center;justify-content:center;padding:0}
         .slide-active{opacity:1;z-index:2}
         .slide-content{position:relative;z-index:3;max-width:900px;padding:40px;text-align:center}
@@ -211,7 +211,7 @@
             .header-donate{padding:6px 14px;font-size:10px;letter-spacing:1px}
             .ticker-bar{display:none}
             .mobile-ticker{display:flex!important}
-            .slider{height:calc(100vh - 84px);min-height:auto;margin-top:84px}
+            .slider{height:calc(100vh - 130px);min-height:auto}
             .slide-content{padding:25px 20px}
             .title{font-size:34px;letter-spacing:1px;margin-bottom:10px}
             .subtitle{font-size:13px;padding:0 5px;margin-bottom:15px;line-height:1.5}
@@ -293,6 +293,9 @@
         <a href="https://www.launchgood.com/v4/campaign/salah_sarsour_justice_fund" target="_blank" class="header-donate">DONATE</a>
     </nav>
 </header>
+
+<!-- SPACER FOR FIXED HEADER -->
+<div style="height:74px"></div>
 
 <!-- MOBILE TICKER (hidden on desktop, shown on mobile below header) -->
 <div class="mobile-ticker" id="mobileTicker">
